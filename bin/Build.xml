@@ -1,0 +1,305 @@
+<xml>
+<set name="HXCPP_API_LEVEL" value="331" />
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/sys/io/Process.cpp" >
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/Process.h"/>
+   <depend name="include/sys/io/_Process/Stdin.h"/>
+   <depend name="include/sys/io/_Process/Stdout.h"/>
+  </file>
+  <file name="src/sys/io/_Process/Stdout.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/sys/io/_Process/Stdout.h"/>
+  </file>
+  <file name="src/sys/io/_Process/Stdin.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/_Process/Stdin.h"/>
+  </file>
+  <file name="src/sys/io/FileOutput.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/sys/io/FileInput.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+  </file>
+  <file name="src/sys/io/File.cpp" >
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/File.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/mcli/internal/Tools.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/mcli/internal/Tools.h"/>
+  </file>
+  <file name="src/mcli/DispatchError.cpp" >
+   <depend name="include/mcli/DispatchError.h"/>
+  </file>
+  <file name="src/mcli/Dispatch.cpp" >
+   <depend name="include/Lambda.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/mcli/CommandLine.h"/>
+   <depend name="include/mcli/Dispatch.h"/>
+   <depend name="include/mcli/DispatchError.h"/>
+   <depend name="include/mcli/internal/Kind.h"/>
+   <depend name="include/mcli/internal/Tools.h"/>
+   <depend name="include/sys/io/Process.h"/>
+  </file>
+  <file name="src/haxe/zip/Uncompress.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/zip/FlushMode.h"/>
+   <depend name="include/haxe/zip/Uncompress.h"/>
+  </file>
+  <file name="src/haxe/zip/FlushMode.cpp" >
+   <depend name="include/haxe/zip/FlushMode.h"/>
+  </file>
+  <file name="src/haxe/zip/Compress.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/zip/Compress.h"/>
+   <depend name="include/haxe/zip/FlushMode.h"/>
+  </file>
+  <file name="src/haxe/io/Output.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+  </file>
+  <file name="src/haxe/io/Error.cpp" >
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/io/Eof.cpp" >
+   <depend name="include/haxe/io/Eof.h"/>
+  </file>
+  <file name="src/haxe/io/BytesInput.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesInput.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+  </file>
+  <file name="src/haxe/io/Input.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+  </file>
+  <file name="src/haxe/io/BytesBuffer.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+  </file>
+  <file name="src/haxe/io/Bytes.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/ds/StringMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/haxe/crypto/Crc32.cpp" >
+   <depend name="include/haxe/crypto/Crc32.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/haxe/IMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+  </file>
+  <file name="src/format/tools/Inflate.cpp" >
+   <depend name="include/format/tools/Inflate.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/zip/Uncompress.h"/>
+  </file>
+  <file name="src/format/tools/Deflate.cpp" >
+   <depend name="include/format/tools/Deflate.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/zip/Compress.h"/>
+  </file>
+  <file name="src/format/png/Tools.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/format/png/Chunk.h"/>
+   <depend name="include/format/png/Color.h"/>
+   <depend name="include/format/png/Tools.h"/>
+   <depend name="include/format/tools/Deflate.h"/>
+   <depend name="include/format/tools/Inflate.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesBuffer.h"/>
+  </file>
+  <file name="src/format/png/Reader.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/format/png/Chunk.h"/>
+   <depend name="include/format/png/Color.h"/>
+   <depend name="include/format/png/Reader.h"/>
+   <depend name="include/haxe/crypto/Crc32.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesInput.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+  </file>
+  <file name="src/format/png/Chunk.cpp" >
+   <depend name="include/format/png/Chunk.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/format/png/Color.cpp" >
+   <depend name="include/format/png/Color.h"/>
+  </file>
+  <file name="src/cpp/Lib.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/converter/Converter.cpp" >
+   <depend name="include/Console.h"/>
+   <depend name="include/MemoryUtils.h"/>
+   <depend name="include/converter/Converter.h"/>
+   <depend name="include/format/tools/Deflate.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/Type.cpp" >
+   <depend name="include/Type.h"/>
+  </file>
+  <file name="src/Sys.cpp" >
+   <depend name="include/Sys.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/StringTools.cpp" >
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/StringBuf.cpp" >
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Std.cpp" >
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp" >
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/MemoryUtils.cpp" >
+   <depend name="include/MemoryUtils.h"/>
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Main.cpp" >
+   <depend name="include/Console.h"/>
+   <depend name="include/FileSystem.h"/>
+   <depend name="include/Main.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/converter/Converter.h"/>
+   <depend name="include/mcli/CommandLine.h"/>
+   <depend name="include/mcli/Dispatch.h"/>
+   <depend name="include/mcli/internal/Kind.h"/>
+  </file>
+  <file name="src/mcli/internal/Kind.cpp" >
+   <depend name="include/mcli/internal/Kind.h"/>
+  </file>
+  <file name="src/mcli/CommandLine.cpp" >
+   <depend name="include/mcli/CommandLine.h"/>
+   <depend name="include/mcli/Dispatch.h"/>
+  </file>
+  <file name="src/_List/ListIterator.cpp" >
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/_List/ListNode.cpp" >
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/List.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/Lambda.cpp" >
+   <depend name="include/Lambda.h"/>
+  </file>
+  <file name="src/FileSystem.cpp" >
+   <depend name="include/FileSystem.h"/>
+   <depend name="include/List.h"/>
+   <depend name="include/format/png/Reader.h"/>
+   <depend name="include/format/png/Tools.h"/>
+   <depend name="include/format/tools/Inflate.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/haxe/io/Output.h"/>
+   <depend name="include/sys/io/File.h"/>
+   <depend name="include/sys/io/FileInput.h"/>
+   <depend name="include/sys/io/FileOutput.h"/>
+  </file>
+  <file name="src/Console.cpp" >
+   <depend name="include/Console.h"/>
+   <depend name="include/Sys.h"/>
+  </file>
+  <file name="src/__boot__.cpp" >
+   <depend name="include/mcli/DispatchError.h"/>
+   <depend name="include/haxe/zip/FlushMode.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/format/png/Chunk.h"/>
+   <depend name="include/format/png/Color.h"/>
+   <depend name="include/mcli/internal/Kind.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/converter/Converter.h"/>
+   <depend name="include/Main.h"/>
+   <depend name="include/Console.h"/>
+  </file>
+  <file name="src/__files__.cpp" if='HXCPP_DEBUGGER'>
+  </file>
+   <file name="${HXCPP}/src/hx/NoFiles.cpp" unless="HXCPP_DEBUGGER" />
+  <file name="src/__resources__.cpp" >
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/mcli/CommandLine.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/mcli/CommandLine.h"/>
+  </file>
+</files>
+<files id="__resources__">
+</files>
+<files id="__externs__">
+</files>
+<set name="HAXE_OUTPUT" value="Main" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/zlib/Build.xml" />
+<include name="${HXCPP}/src/hx/libs/zlib/Build.xml"/>
+</xml>

@@ -51,6 +51,7 @@ class Main extends CommandLine
 		var convertedData = Converter.convertTo4444(data);
 		
 		FileSystem.savePPX(output, convertedData);
+		FileSystem.readPPX(output);
 		
 		Sys.exit(0);
 	}

@@ -2,9 +2,9 @@
 cd bin
 if "%1"=="debug" (
   :: run debug
-  img2ppx-debug.exe
+  Main-Debug.exe
 ) else (
   :: run release
-  img2ppx.exe
+  Main.exe
 )
 pause

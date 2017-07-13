@@ -1,0 +1,60 @@
+def img2ppx = "img2ppx.exe";
+def img2webp = "cwebp";
+
+task convert2(type:Exec) {
+    def os = new ByteArrayOutputStream();
+    args = ['--input', 'tester.png']
+    executable = img2ppx
+    standardOutput = os
+    ignoreExitValue = true
+}
+
+task convert() {
+    def files = []
+    fileTree(".").visit { FileVisitDetails details ->
+
+        def name = details.file.getName();
+
+        if(name.substring(name.lastIndexOf('.') + 1) == "png")
+            files << details.file
+    }
+
+    def i = 0;
+
+    println "start converting"
+    println ""
+    for(file in files) {
+        exec {
+            def os = new ByteArrayOutputStream();
+
+            def name = file.name;
+            name = name.substring(0, name.lastIndexOf('.')) + ".ppx";
+
+            def output = System.getProperty("user.dir") + '\\ppx\\' + name;
+
+            args = ['--in', file, '--out', output]
+            executable = img2ppx
+            standardOutput = os
+            ignoreExitValue = true
+        }
+
+        exec {
+            def os = new ByteArrayOutputStream();
+
+            def name = file.name;
+            name = name.substring(0, name.lastIndexOf('.')) + ".webp";
+
+            def output =  System.getProperty("user.dir") + '\\webp\\' + name;
+
+            args = [file, '-quiet', '-o', output]
+            executable = img2webp
+            standardOutput = os
+            ignoreExitValue = true
+        }
+
+        println i + ' of ' + files.size;
+        i++;
+    }
+
+
+}
