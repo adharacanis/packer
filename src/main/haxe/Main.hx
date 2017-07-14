@@ -1,8 +1,12 @@
 package;
 
 import converter.Converter;
+import converter.data.Color16;
+import converter.data.Color32;
+import converter.data.Color565;
 import mcli.CommandLine;
 import mcli.Dispatch;
+import system.Console;
 
 class Main extends CommandLine
 {
@@ -21,6 +25,15 @@ class Main extends CommandLine
 	
 	static function main() 
 	{
+		
+		var color:Color16 = new Color16();
+		var color565:Color565 = new Color565();
+		color.setFromColorValue(20780);
+		color565.setFromColorValue(43974);
+		
+		trace(color.getColorValue());
+		trace(color565.getColorValue());
+		
 		new Dispatch(Sys.args()).dispatch(new Main());
 	}
 	
@@ -34,7 +47,7 @@ class Main extends CommandLine
 		if (output == null)
 			output = path.substr(0, path.lastIndexOf(".")) + ".ppx";
 			
-		Console.silent = silent;
+		system.Console.silent = silent;
 			
 		var fileType:String = path.substr(path.lastIndexOf(".") + 1, path.length);
 		
@@ -44,7 +57,7 @@ class Main extends CommandLine
 			data = FileSystem.readPNG(path);
 		else
 		{
-			Console.error('format $fileType is not supported');
+			system.Console.error('format $fileType is not supported');
 			Sys.exit(1);
 		}
 			

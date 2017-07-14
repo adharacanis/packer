@@ -1,0 +1,23 @@
+task setup() {
+   
+}
+
+task clean() {
+    doLast {
+        remove 'bin'
+    }
+}
+
+task compile(type: Exec) {
+	args = ['packer.hxml']
+    executable = 'haxe'
+}
+
+task test(type: Exec) {
+	args = ['test.hxml']
+    executable = 'haxe'
+}
+
+task run(type: Exec) {
+    executable = 'Run.bat'
+}

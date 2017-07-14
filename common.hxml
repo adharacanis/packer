@@ -1,0 +1,6 @@
+-lib format
+-lib mcli
+
+-cp src/main/haxe
+
+-dce full

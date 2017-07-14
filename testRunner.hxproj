@@ -4,7 +4,7 @@
   <output>
     <movie outputType="CustomBuild" />
     <movie input="" />
-    <movie path="packer.hxml" />
+    <movie path="testRunner.hxml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -16,13 +16,14 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src\main\haxe" />
+    <class path="src\test\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
     <option directives="" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
-    <option mainClass="Main" />
+    <option mainClass="TestAll" />
     <option enabledebug="False" />
     <option additional="-dce full" />
   </build>
@@ -30,12 +31,11 @@
   <haxelib>
     <library name="format" />
     <library name="mcli" />
-    <library name="mcli" />
+    <library name="utest" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\Main.hx" />
-    <compile path="src\main\haxe\Main.hx" />
+    <!-- example: <compile path="..." /> -->
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
@@ -44,12 +44,12 @@
   <!-- Executed before build -->
   <preBuildCommand>cmd /c haxe $(BuildConfig).hxml $(ProjectName).hxml</preBuildCommand>
   <!-- Executed after build -->
-  <postBuildCommand alwaysRun="False">c:\windows\system32\cmd.exe  /C COPY /Y $(OutputDir)\bin\Main.exe $(OutputDir)\autoconvert\img2ppx.exe</postBuildCommand>
+  <postBuildCommand alwaysRun="False" />
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Custom" />
-    <option testMovieCommand="Run.bat" />
+    <option testMovieCommand="RunTests.bat $(BuildConfig)" />
   </options>
   <!-- Plugin storage -->
   <storage />

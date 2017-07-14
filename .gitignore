@@ -3,3 +3,4 @@
 *.ppx
 .gradle
 /bin
+.temp/

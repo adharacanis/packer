@@ -1,0 +1,7 @@
+common.hxml
+
+-lib mcli
+
+-main Main
+
+-cpp bin
