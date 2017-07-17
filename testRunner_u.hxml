@@ -1,0 +1,9 @@
+common.hxml
+
+-lib utest
+
+-main TestAll
+
+-cp src/test/haxe
+
+-neko bin/test/testRunner.n

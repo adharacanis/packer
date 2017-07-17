@@ -1,29 +1,58 @@
-package;
+import massive.munit.client.RichPrintClient;
+import massive.munit.client.HTTPClient;
+import massive.munit.client.SummaryReportClient;
+import mcover.coverage.CoverageLogger;
+import mcover.coverage.MCoverage;
+import mcover.coverage.munit.client.MCoverPrintClient;
+import mcover.coverage.munit.client.MCoverSummaryReportClient;
 
-import utest.Runner;
-import utest.ui.Report;
-import converter.data.TestBaseColor;
+import massive.munit.TestRunner;
 
 class TestAll
 {
-	static var isInitialize:Bool = false;
+	static function main(){	
+		new TestAll();	
+	}
 
-	public static function main() {
-		if (isInitialize == false) {
-			isInitialize = true;
-			new TestAll();
+	public function new()
+	{
+		var suites = new Array<Class<massive.munit.TestSuite>>();
+		suites.push(DataTestSuit);
+		
+		#if MCOVER
+			var client = new MCoverPrintClient();
+			var httpClient = new HTTPClient(new MCoverSummaryReportClient());
+		#else
+			var client = new RichPrintClient();
+			var httpClient = new HTTPClient(new SummaryReportClient());
+		#end
+
+		var runner:TestRunner = new TestRunner(client); 
+		runner.addResultClient(httpClient);
+
+		runner.completionHandler = completionHandler;
+		runner.run(suites);
+	}
+	
+	/*
+		updates the background color and closes the current browser
+		for flash and html targets (useful for continous integration servers)
+	*/
+	private function completionHandler(successful:Bool):Void
+	{
+		try
+		{
+			#if flash
+				flash.external.ExternalInterface.call("testResult", successful);
+			#elseif js
+				js.Lib.eval("testResult(" + successful + ");");
+			#elseif sys
+				Sys.exit(0);
+			#end
 		}
-	}
-	
-	public function new() {
-		initCases(new Runner());
-	}
-	
-	public function initCases(runner:Runner) {
-		trace(Type.getInstanceFields(TestBaseColor));
-		runner.addCase(new TestBaseColor());
-
-		Report.create(runner);
-		runner.run();
+		// if run from outside browser can get error which we can ignore
+		catch (e:Dynamic)
+		{
+		}
 	}
 }

@@ -1,9 +1,17 @@
 common.hxml
 
--lib utest
+#-debug
 
--main TestAll
+-lib hamcrest
+-lib munit
+-lib mcover
+
+-D MCOVER
+--macro mcover.MCover.coverage([''],['src/main/haxe'])
+--macro mcover.MCover.logger([''], ['src/main/haxe'])
 
 -cp src/test/haxe
+-main TestAll
 
--neko bin/test/testRunner.n
+#-D HXCPP_M64
+-cpp bin/test

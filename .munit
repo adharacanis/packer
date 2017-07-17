@@ -1,0 +1,6 @@
+version=2.1.2
+src=src/test/haxe
+bin=bin/test
+report=bin/report
+hxml=testRunner.hxml
+classPaths=src/main/haxe

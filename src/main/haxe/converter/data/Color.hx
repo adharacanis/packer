@@ -1,15 +1,15 @@
 package converter.data;
 
-class Color implements IColor
+class Color
 {
-	@:isVar var a(get, set):UInt;
-	@:isVar var r(get, set):UInt;
-	@:isVar var g(get, set):UInt;
-	@:isVar var b(get, set):UInt;
+	@:isVar public var a(get, set):UInt;
+	@:isVar public var r(get, set):UInt;
+	@:isVar public var g(get, set):UInt;
+	@:isVar public var b(get, set):UInt;
 	
 	public var colorSpace:ColorSpace;
 
-	private function new(colorSpace:ColorSpace) 
+	public function new(colorSpace:ColorSpace) 
 	{
 		this.colorSpace = colorSpace;
 	}

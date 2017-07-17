@@ -2,11 +2,11 @@ package converter.data;
 
 class ColorSpace 
 {
-	public static inline COLOR_SPACE_565 = new ColorSpace(5, 6, 5);
-	public static inline COLOR_SPACE_4444 = new ColorSpace(4, 4, 4, 4);
-	public static inline COLOR_SPACE_5551 = new ColorSpace(5, 5, 5, 1);
-	public static inline COLOR_SPACE_8888 = new ColorSpace(8, 8, 8, 8);
-	public static inline COLOR_SPACE_888 = new ColorSpace(8, 8, 8);
+	public static var COLOR_SPACE_565 = new ColorSpace(5, 6, 5);
+	public static var COLOR_SPACE_4444 = new ColorSpace(4, 4, 4, 4);
+	public static var COLOR_SPACE_5551 = new ColorSpace(5, 5, 5, 1);
+	public static var COLOR_SPACE_8888 = new ColorSpace(8, 8, 8, 8);
+	public static var COLOR_SPACE_888 = new ColorSpace(8, 8, 8);
 	
 	var r:UInt;
 	var g:UInt;

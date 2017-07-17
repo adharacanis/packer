@@ -1,17 +1,26 @@
+import massive.munit.client.PrintClient;
 import massive.munit.client.RichPrintClient;
 import massive.munit.client.HTTPClient;
+import massive.munit.client.JUnitReportClient;
 import massive.munit.client.SummaryReportClient;
-
 import massive.munit.TestRunner;
 
-class TestAll
+#if js
+import js.Lib;
+#end
+
+/**
+ * Auto generated Test Application.
+ * Refer to munit command line tool for more information (haxelib run munit)
+ */
+class TestMain
 {
-	static function main(){	new TestAll(); }
+	static function main(){	new TestMain(); }
 
 	public function new()
 	{
 		var suites = new Array<Class<massive.munit.TestSuite>>();
-		suites.push(DataTestSuit);
+		suites.push(TestSuite);
 
 		#if MCOVER
 			var client = new mcover.coverage.munit.client.MCoverPrintClient();
@@ -23,16 +32,36 @@ class TestAll
 
 		var runner:TestRunner = new TestRunner(client); 
 		runner.addResultClient(httpClient);
-
+		//runner.addResultClient(new HTTPClient(new JUnitReportClient()));
+		
 		runner.completionHandler = completionHandler;
+		
+		#if js
+		var seconds = 0; // edit here to add some startup delay
+		function delayStartup() 
+		{
+			if (seconds > 0) {
+				seconds--;
+				js.Browser.document.getElementById("munit").innerHTML =
+					"Tests will start in " + seconds + "s...";
+				haxe.Timer.delay(delayStartup, 1000);
+			}
+			else {
+				js.Browser.document.getElementById("munit").innerHTML = "";
+				runner.run(suites);
+			}
+		}
+		delayStartup();
+		#else
 		runner.run(suites);
+		#end
 	}
 
 	/*
 		updates the background color and closes the current browser
 		for flash and html targets (useful for continous integration servers)
 	*/
-	private function completionHandler(successful:Bool):Void
+	function completionHandler(successful:Bool):Void
 	{
 		try
 		{

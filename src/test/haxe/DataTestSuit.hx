@@ -5,7 +5,7 @@ import converter.data.TestBaseColor;
 
 class DataTestSuit extends massive.munit.TestSuite
 {		
-	public function new()
+	@:keep public function new()
 	{
 		super();
 
