@@ -1,9 +1,6 @@
 package;
 
 import converter.Converter;
-import converter.data.Color16;
-import converter.data.Color32;
-import converter.data.Color565;
 import mcli.CommandLine;
 import mcli.Dispatch;
 import system.Console;
@@ -25,15 +22,6 @@ class Main extends CommandLine
 	
 	static function main() 
 	{
-		
-		var color:Color16 = new Color16();
-		var color565:Color565 = new Color565();
-		color.setFromColorValue(20780);
-		color565.setFromColorValue(43974);
-		
-		trace(color.getColorValue());
-		trace(color565.getColorValue());
-		
 		new Dispatch(Sys.args()).dispatch(new Main());
 	}
 	

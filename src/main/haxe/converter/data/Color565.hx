@@ -1,6 +1,6 @@
 package converter.data;
 
-class Color565 extends Color implements IColor
+class Color565 extends Color
 {
 
 	public function new() 
