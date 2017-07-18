@@ -1,1 +1,2 @@
 #--no-traces
+-dce full

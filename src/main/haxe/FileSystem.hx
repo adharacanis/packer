@@ -28,10 +28,10 @@ class FileSystem
 	
 	public static function savePNG(path:String, data:ImageData)
 	{
-		var file = File.write(path, true);
-		var writer = new format.png.Writer(file);
-		writer.write(format.png.Tools.build16BGRA(data.width, data.height, data.data));
-		file.close();
+		//var file = File.write(path, true);
+		//var writer = new format.png.Writer(file);
+		//writer.write(format.png.Tools.build32BGRA(data.width, data.height, data.data));
+		//file.close();
 	}
 	
 	

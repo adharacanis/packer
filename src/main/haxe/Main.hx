@@ -1,6 +1,7 @@
 package;
 
 import converter.Converter;
+//import converter.ppx.FixedPaletteMap4444;
 import mcli.CommandLine;
 import mcli.Dispatch;
 import system.Console;
@@ -22,6 +23,7 @@ class Main extends CommandLine
 	
 	static function main() 
 	{
+		//utils.SystemTools.tracePalleteMap(new FixedPaletteMap4444());
 		new Dispatch(Sys.args()).dispatch(new Main());
 	}
 	

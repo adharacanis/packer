@@ -5,7 +5,8 @@ import haxe.ds.Vector;
 
 class PaletteMap 
 {
-
+	public var colorMap:Array<UInt> = new Array<UInt>();
+	
 	public function new() 
 	{
 		

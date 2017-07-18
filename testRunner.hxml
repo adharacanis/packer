@@ -2,6 +2,8 @@ common.hxml
 
 #-debug
 
+-dce no
+
 -lib hamcrest
 -lib munit
 -lib mcover
